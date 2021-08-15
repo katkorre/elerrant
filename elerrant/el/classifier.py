@@ -17,13 +17,13 @@ def load_word_list(path):
 
 
 # Classifier resources
-base_dir = "errant/errant/en"
+base_dir = "elerrant/en"
 # Spacy
 nlp = None
 # Greek Stemmer
 stemmer = GreekStemmer()
 # Greek Word list
-spell = load_word_list('/content/errant/el/resources/20110903/el_GR.txt')
+spell = load_word_list('/elerrant/el/resources/el_GR.txt')
 
 # Rare POS tags that make uninformative error categories
 rare_pos = {"INTJ", "NUM", "SYM", "X"}
@@ -42,18 +42,6 @@ simple_cats={'CCONJ':'CONJ', 'SCONJ':'CONJ', 'ADP':'PREP' }
 # Contractions
 conts = {"'ναι", "'φερε", "απ'", "σ'", "τ'", "φέρ'", "θ'", "ν'",
          "μ'", "γι'", "μέσ'", "'χει", "'χεις", "'σαι", "'μαι", "'ρθεις", "'ρθει" }
-
-# Contractions
-#passions = Main_Greek_vocalPassions.greek_vocalpassions_dict
-#conts = {key: list(map(str, value.split())) for key, value in passions.items()}
-#cont_list = list(conts.values())
-#newlist = [item for items in cont_list for item in items]
-#r = re.compile("^'[a-z]*")
-#r2 = re.compile("[^.!?]+\'")
-#contr1 = list(filter(r.match, newlist))
-#contr2 = list(filter(r2.match, newlist))
-#conts = contr1 + contr2
-
 
 # Input: An Edit object
 # Output: The same Edit object with an updated error type
@@ -108,8 +96,6 @@ def classify(edit):
             cat = simplify(get_two_sided_type(edit.o_toks, edit.c_toks))
             edit.type = op+cat
     return edit
-
-
 
 # Input: Spacy tokens
 # Output: A list of pos and dep tag strings
