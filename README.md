@@ -1,5 +1,9 @@
 # ERRANT
-In this repository you can find the Greek version of the automatic annotation tool ERRANT, along with two new datasets in Modern Greek, the Greek Native Corpus (GNC) and the Greek WikiEdits corpus (GWE). Elerrant is based on the ERRor ANnotation Toolkit (ERRANT) described in: 
+In this repository you can find the Greek version of the automatic annotation tool ERRANT, along with two new datasets in Modern Greek, the Greek Native Corpus (GNC) and the Greek WikiEdits corpus (GWE). Elerrant was presented at RANLP 2021 and it is described in:
+
+- Katerina Korre, Marita Chatzipanagiotou and John Pavlopoulos. 2021. ELERRANT: Automatic Grammatical Error Type Classification for Greek. In Proceedings of the Recent Advances in Natural Language Processing. 
+
+Elerrant is based on the ERRor ANnotation Toolkit (ERRANT) described in: 
 
 - Christopher Bryant, Mariano Felice, and Ted Briscoe. 2017. [Automatic annotation and evaluation of Error Types for Grammatical Error Correction](https://aclanthology.org/P17-1074.pdf). In Proceedings of the 55th Annual   Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). Vancouver, Canada.
 
